@@ -68,7 +68,7 @@ function openApp(name, path) {
         <iframe
             src="${path}"
             title="${name}"
-            sandbox="allow-scripts allow-forms"
+            sandbox="allow-scripts allow-forms allow-same-origin"
         ></iframe>
     `; //Iframe allows me to embed app info inside of the main html page
 
