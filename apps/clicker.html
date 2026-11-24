@@ -39,6 +39,7 @@
     <hr>
     <button onclick="purchaseYarn()">Buy YARN! 10 cats and gives you +1 cats per second!</button>
     <button onclick="purchaseMilk()">Buy MILK! 10 cats and gives you +5% cats, every second!</button>
+    <button onclick="purchaseCPC()">Buy CATNIP! More cats per click for just 10 coins!</button>
 </body>
 <script>
     const catImages = [
@@ -56,6 +57,7 @@
     let clicks = 0;
     let yarnCount = 0;
     let milkCount = 0;
+    let catsperclick = 1;
     let currentCatIndex = -1;
 
     function renderCount() {
@@ -63,7 +65,7 @@
     }
 
     function incrementCount() {
-        clicks++;
+        clicks = clicks + catsperclick;
         renderCount();
 
         let nextCatIndex = Math.floor(Math.random() * catImages.length);
@@ -97,6 +99,19 @@
         if (clicks >= 10) {
             clicks -= 10;
             milkCount++;
+            renderCount();
+        }
+        else {
+            alert("Not enough cats!")
+        }
+    }
+
+    setInterval(updateClicks, 100);
+
+function purchaseCPC() {
+        if (clicks >= 10) {
+            clicks -= 10;
+            catsperclick++;
             renderCount();
         }
         else {
