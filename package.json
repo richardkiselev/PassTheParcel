@@ -1,0 +1,15 @@
+{
+  "name": "passtheparcel",
+  "version": "1.0.0",
+  "description": "This is ParcelOS, a nice little project I've been working on for Crossroads! Just open it in your browser (https://richardkiselev.github.io/PassTheParcel). I was inspired to do this after seeing how great the Hack Club community was. I really just wanted to make a cool collaborative project that everyone could participate in. It would also make putting in hours easier. Instead of coming up with new complex systems, I could just make apps and add features.",
+  "main": "electron/main.js",
+  "scripts": {
+  "start": "electron ."
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^45.5.0"
+  }
+}
